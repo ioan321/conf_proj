@@ -6,11 +6,13 @@
     [attr.role]="isHandset ? 'dialog' : 'navigation'"
     [mode]="(isHandset | async)!.matches ? 'over' : 'side'"
     [opened]="!(isHandset | async)!.matches">
-    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-toolbar color="primary">
+      <a [routerLink]="['/']"><img class="logo" src="assets/img/infosys_white_no_bg.png" alt="Infosys Logo"></a>
+    </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <!-- <a mat-list-item [routerLink]="['/calendar']">Calendar</a>
+      <a mat-list-item [routerLink]="['/floor-map']">Floor Map</a>
+      <a mat-list-item [routerLink]="['/view-event']">View Your Events</a> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -23,7 +25,10 @@
         *ngIf="(isHandset | async)!.matches">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>Application Title</span>
+      <span>Infy Room</span>
     </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
