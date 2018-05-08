@@ -5,7 +5,7 @@ import { SuperTableDataSource } from './super-table-datasource';
 @Component({
   selector: 'super-table',
   templateUrl: './super-table.component.html',
-  styleUrls: ['./super-table.component.css']
+  styleUrls: ['./super-table.component.scss']
 })
 export class SuperTableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
