@@ -1,0 +1,14 @@
+h1, h3, h4, h5 {
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+.status-text {
+  font-size: 7.5rem;
+  font-weight: 600;
+  margin: 1.3rem 0;
+}
+
+mat-card-content, mat-card-actions {
+  text-align: center;
+}
