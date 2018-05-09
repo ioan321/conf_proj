@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-calendar',
   templateUrl: './calendar.component.html',
-  styleUrls: ['./calendar.component.scss']
+  styleUrls: ['./calendar.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CalendarComponent implements OnInit {
 
@@ -12,4 +13,9 @@ export class CalendarComponent implements OnInit {
   ngOnInit() {
   }
 
+  getChangedValue(e) {
+    console.log(e);
+  }
+
+  room = "Larry Bird";
 }
