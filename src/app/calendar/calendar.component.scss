@@ -1,9 +1,33 @@
 @import 'src/sass/variables';
+$calendarWidth: 46%;
+$eventsWidth: calc(100% - #{$calendarWidth} - 4%);
 
 mat-calendar {
-  width: 44%;
+  float: left;
+  width: $calendarWidth;
 }
 
 .event {
-  color: $primary;
+  border-color: $primary;
+  border-style: solid;
+  border-width: thin;
+}
+
+.eventHeader {
+  float: right;
+  width: $eventsWidth !important;
+
+  mat-toolbar-row {
+    justify-content: center;
+
+    &:last-of-type {
+      background-color: $accentLighter;
+    }
+  }
+}
+
+.cal-fab {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
 }
