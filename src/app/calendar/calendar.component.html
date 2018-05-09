@@ -1,1 +1,19 @@
-<mat-calendar></mat-calendar>
+<mat-calendar #myDate (selectedChange)="getChangedValue($event)"></mat-calendar>
+<mat-toolbar class="eventHeader" color="accent">
+  <mat-toolbar-row>
+    <span>Tuesday, May 8 2018</span>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <mat-form-field>
+      <mat-select xPosition="before" yPosition="below" [(value)]="room">
+        <mat-option value="Larry Bird">Larry Bird</mat-option>
+        <mat-option value="Hoosier">Hoosier</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<button mat-fab aria-label="Create a new event" class="cal-fab">
+  <mat-icon>create</mat-icon>
+</button>
