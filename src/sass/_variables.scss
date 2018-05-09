@@ -1,5 +1,14 @@
 @import "./theme.scss";
 
-$primary: mat-color(map-get($theme, primary));
-$accent: mat-color(map-get($theme, accent));
+$theme-primary: map-get($theme, primary);
+$theme-accent: map-get($theme, accent);
+
+$primary: mat-color($theme-primary);
+$primaryLighter: mat-color($theme-primary, lighter);
+$primaryDarker: mat-color($theme-primary, darker);
+
+$accent: mat-color($theme-accent);
+$accentLighter: mat-color($theme-accent, lighter);
+$accentDarker: mat-color($theme-accent, darker);
+
 $warn: mat-color(map-get($theme, warn));
