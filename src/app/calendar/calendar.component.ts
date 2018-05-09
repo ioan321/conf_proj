@@ -13,4 +13,9 @@ export class CalendarComponent implements OnInit {
   ngOnInit() {
   }
 
+  getChangedValue(e) {
+    console.log(e);
+  }
+
+  room = "Larry Bird";
 }
