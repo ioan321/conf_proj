@@ -1,6 +1,14 @@
 @import 'src/sass/variables';
 $calendarWidth: 46%;
-$eventsWidth: calc(100% - #{$calendarWidth} - 4%);
+$eventsWidth: calc(100% - #{$calendarWidth} - 2%);
+$eventHeaderMargin: .8rem;
+$eventsHeight: calc(100vh - (#{$toolbarHeight} + #{$contentMarginVert} * 2));
+$eventsListHeight: calc(#{$eventsHeight} - (#{$toolbarHeight} * 2 + #{$eventHeaderMargin}));
+
+.cal-view {
+  height: $eventsHeight;
+  overflow: hidden;
+}
 
 mat-calendar {
   float: left;
@@ -14,8 +22,8 @@ mat-calendar {
 }
 
 .eventHeader {
-  float: right;
-  width: $eventsWidth !important;
+  margin-bottom: $eventHeaderMargin;
+  z-index: 9;
 
   mat-toolbar-row {
     justify-content: center;
@@ -26,8 +34,21 @@ mat-calendar {
   }
 }
 
+.eventsList {
+  width: $eventsWidth;
+  // height: $eventsHeight;
+  float: right;
+  overflow: hidden;
+  will-change: overflow;
+
+  .eventList {
+    height: $eventsListHeight;
+  }
+}
+
 .cal-fab {
-  position: absolute;
+  position: absolute !important;
   right: 15px;
   bottom: 15px;
+  z-index: 10;
 }
