@@ -14,6 +14,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SuperTableComponent } from './super-table/super-table.component';
 import { BookComponent } from './book/book.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CalEventComponent } from './cal-event/cal-event.component';
+import { CalEventListComponent } from './cal-event-list/cal-event-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
@@ -28,7 +30,9 @@ const routes: Routes = [
     DashboardComponent,
     SuperTableComponent,
     BookComponent,
-    CalendarComponent
+    CalendarComponent,
+    CalEventComponent,
+    CalEventListComponent
   ],
   imports: [
     BrowserModule,
