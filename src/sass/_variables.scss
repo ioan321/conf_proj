@@ -12,3 +12,7 @@ $accentLighter: mat-color($theme-accent, lighter);
 $accentDarker: mat-color($theme-accent, darker);
 
 $warn: mat-color(map-get($theme, warn));
+
+$toolbarHeight: 64px;
+$contentMarginVert: 10px;
+$contentMarginHorz: 15px;
