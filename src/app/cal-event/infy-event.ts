@@ -1,6 +1,7 @@
-import { CalendarEvent} from 'angular-calendar';
+// import { CalendarEvent} from 'angular-calendar';
 
-export class InfyEvent implements CalendarEvent {
+// export class InfyEvent implements CalendarEvent {
+export class InfyEvent {
     id?: string | number;
     start: Date | null;
     title: string | null;

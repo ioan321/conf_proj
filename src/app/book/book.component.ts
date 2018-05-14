@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventDialogService} from '../event-dialog.service';
 
 @Component({
   selector: 'app-book',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookComponent implements OnInit {
 
-  constructor() { }
+  constructor(public eventDialog: EventDialogService) {}
 
   ngOnInit() {
   }

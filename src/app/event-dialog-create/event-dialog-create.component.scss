@@ -1,0 +1,27 @@
+@import "src/sass/variables";
+
+.dialogActions {
+  float: right;
+}
+
+.highlight {
+  color: $primary;
+}
+
+.dialogContent {
+  margin: 0 30px;
+}
+
+mat-form-field {
+  width: auto;
+  float: left;
+  margin-bottom: 1.2rem;
+
+  &:nth-of-type(2n) {
+    float: right;
+  }
+}
+
+ngx-material-timepicker {
+  height: 300px !important;
+}

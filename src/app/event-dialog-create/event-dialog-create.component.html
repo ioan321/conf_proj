@@ -1,0 +1,65 @@
+<h1 mat-dialog-title>Book <span class="highlight">{{ data.room }}</span></h1>
+
+<div class="dialogContent" mat-dialog-content>
+    <mat-form-field>
+      <input type="text"
+        matInput
+        placeholder="Event Name"
+        [(ngModel)]="data.name">
+      <button mat-button *ngIf="name" matSuffix mat-icon-button aria-label="Clear" (click)="name=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="text"
+        matInput
+        placeholder="Employee ID"
+        [(ngModel)]="data.empId">
+      <button mat-button *ngIf="empId" matSuffix mat-icon-button aria-label="Clear" (click)="empId=''">
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-hint>No Employee  ID? Use name instead</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+        placeholder="Event Start"
+        [ngxTimepicker]="eventStart"
+        [value]="data.eStart">
+      <mat-hint>Meetings must start on 15 minute increments</mat-hint>
+      <ngx-material-timepicker #eventStart (timeSet)="checkStartTime($event)"></ngx-material-timepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+        placeholder="Event End"
+        [ngxTimepicker]="eventEnd"
+        [value]="data.eEnd">
+      <ngx-material-timepicker #eventEnd (timeSet)="checkEndTime($event)"></ngx-material-timepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+        [matDatepicker]="eventDate"
+        placeholder="Event Date"
+        [(ngModel)]="data.eDate">
+      <mat-datepicker-toggle matSuffix [for]="eventDate"></mat-datepicker-toggle>
+      <mat-datepicker touchUi="true" #eventDate></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="number"
+        matInput
+        placeholder="Number Of Participants"
+        [(ngModel)]="data.numParticipants">
+    </mat-form-field>
+</div>
+
+<div class="dialogActions" mat-dialog-actions>
+  <button mat-raised-button
+    (click)="onNoClick()">Cancel</button>
+  <button mat-raised-button
+    color="accent"
+    [mat-dialog-close]="data">Create</button>
+</div>
