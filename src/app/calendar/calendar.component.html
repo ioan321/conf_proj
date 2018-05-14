@@ -19,7 +19,11 @@
     <infy-cal-event-list class="eventList"></infy-cal-event-list>
   </div>
 
-  <button mat-fab aria-label="Create a new event" class="cal-fab">
+  <button
+    mat-fab
+    aria-label="Open create event dialog"
+    class="cal-fab"
+    (click)="eventDialog.openDialog()">
     <mat-icon>create</mat-icon>
   </button>
 </div>
