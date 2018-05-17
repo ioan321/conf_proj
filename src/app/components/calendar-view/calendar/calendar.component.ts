@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { EventDialogService} from '../../../services/event-dialog.service';
+import { CalEventOptions } from 'src/app/interfaces/cal-event-options';
 
 @Component({
   selector: 'app-calendar',
@@ -10,6 +11,11 @@ import { EventDialogService} from '../../../services/event-dialog.service';
 export class CalendarComponent implements OnInit {
 
   room = "Larry Bird";
+  options: CalEventOptions = {
+    room: "Larry Bird",
+    date: new Date(),
+    empId: null
+  };
 
   constructor(public eventDialog: EventDialogService) {}
 
@@ -17,7 +23,7 @@ export class CalendarComponent implements OnInit {
   }
 
   getChangedValue(e) {
-    console.log(e);
+    this.options.date = e.toISOString();
   }
 
 }
