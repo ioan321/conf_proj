@@ -1,0 +1,27 @@
+@import "src/sass/variables";
+
+$toolbarMargin: .8rem;
+
+.empEventHeader {
+  margin-bottom:  $toolbarMargin;
+  z-index: 9;
+
+  mat-toolbar-row {
+    justify-content: center;
+  }
+}
+
+.eventsList {
+  width: 100%;
+  float: right;
+  overflow: hidden;
+  will-change: overflow;
+
+  .eventList {
+    height: calc(#{$contentHeight} - #{$toolbarHeight} - #{$toolbarMargin});
+  }
+}
+
+.white-space {
+  white-space: pre;
+}
