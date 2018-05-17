@@ -6,8 +6,8 @@
     <p>Sometimes, you gotta pretend everything is okay.</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="accent" (click)="eventDialog.openDialog()">Book</button>
-    <button mat-raised-button>Floor Map</button>
+    <button mat-raised-button color="accent" (click)="eventDialog.openDialog(room)">Book</button>
+    <button mat-raised-button [routerLink]="['/floor-map']">Floor Map</button>
     <button mat-raised-button [routerLink]="['/calendar']">Calendar</button>
   </mat-card-actions>
 </mat-card>
