@@ -1,0 +1,74 @@
+@import "src/sass/variables";
+
+.wrapper {
+  width: 100%;
+  height: $contentHeight;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.white-space {
+  white-space: pre;
+}
+
+.floorMap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.mat-card {
+  $cardMargin: .8rem;
+  margin-top: $cardMargin;
+
+  .mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+svg {
+  width: 80%;
+  height: 80%;
+
+  .outline {
+    fill: $primaryLighter;
+    stroke: $primary;
+    stroke-width: 2px;
+  }
+  .room {
+    fill: $accent;
+    stroke: $primary;
+    stroke-width:2px;
+  }
+  .fillSpace {
+    fill: $primaryDarker;
+    stroke: $primary;
+    stroke-width:2px;
+  }
+  .text {
+    font-weight:normal;
+    font-size:24px;
+    line-height:125%;
+    fill: #000;
+  }
+  .invert {
+    fill: #fff;
+  }
+  .keyText {
+    fill: #fff;
+  }
+  .legend {
+    stroke: #fff;
+    stroke-width: 2px;
+  }
+  .open {
+    fill: $accent;
+  }
+  .booked {
+    fill: $primary;
+  }
+}
