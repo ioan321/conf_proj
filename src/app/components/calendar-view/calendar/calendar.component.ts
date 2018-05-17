@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { EventDialogService} from '../event-dialog.service';
+import { EventDialogService} from '../../../services/event-dialog.service';
 
 @Component({
   selector: 'app-calendar',
@@ -10,7 +10,7 @@ import { EventDialogService} from '../event-dialog.service';
 export class CalendarComponent implements OnInit {
 
   room = "Larry Bird";
-  
+
   constructor(public eventDialog: EventDialogService) {}
 
   ngOnInit() {

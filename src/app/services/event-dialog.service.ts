@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { EventDialogCreateComponent } from 'src/app/event-dialog-create/event-dialog-create.component';
+import { EventDialogCreateComponent } from '../components/event-dialog-create/event-dialog-create.component';
 
 @Injectable({
   providedIn: 'root'
