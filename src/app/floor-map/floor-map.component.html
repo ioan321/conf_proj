@@ -1,0 +1,59 @@
+<div class="wrapper">
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <mat-menu #floorSelect="matMenu">
+        <button
+          mat-menu-item
+          (click)="updateFloor('21')">21</button>
+        <button
+          mat-menu-item
+          (click)="updateFloor('22')">22</button>
+      </mat-menu>
+      <span class="white-space">Floor: </span>
+      <button
+        mat-raised-button
+        [matMenuTriggerFor]="floorSelect">
+      {{ options.floor }} <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+
+      <span class="fill-space"></span>
+
+      <mat-menu #roomCapacitySelect="matMenu">
+        <button
+          mat-menu-item
+          (click)="updateCapacity('All')">All</button>
+        <button
+          mat-menu-item
+          (click)="updateCapacity('1')">1</button>
+      </mat-menu>
+      <span class="white-space">Capacity: </span>
+      <button
+        mat-raised-button
+        [matMenuTriggerFor]="roomCapacitySelect">
+      {{ options.capacity }} <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+
+      <span class="fill-space"></span>
+
+      <mat-menu #roomFunctionalitySelect="matMenu">
+        <button
+          mat-menu-item
+          (click)="updateFunctionality('All')">All</button>
+        <button
+          mat-menu-item
+          (click)="updateFunctionality('Conference Room')">Conference Room</button>
+      </mat-menu>
+      <span class="white-space">Functionality: </span>
+      <button
+        mat-raised-button
+        [matMenuTriggerFor]="roomFunctionalitySelect">
+      {{ options.functionality }} <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <section>
+    <infy-floor21 *ngIf="options.floor == '21'"></infy-floor21>
+    <infy-floor22 *ngIf="options.floor == '22'"></infy-floor22>
+  </section>
+</div>

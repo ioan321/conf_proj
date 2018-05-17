@@ -9,17 +9,17 @@ export class EventDialogService {
 
   constructor(public dialog: MatDialog) { }
 
-  openDialog(): void {
+  openDialog(room): void {
     let dialogRef = this.dialog.open(EventDialogCreateComponent, {
       width: '600px',
       data: {
-        room: 'Larry Bird',
-        name: '',
+        room: room,
+        name: 'Meeting',
         empId: '',
         eStart: '',
         eEnd: '',
         eDate: '',
-        numParticipants: 0
+        numParticipants: 1
       }
     });
 

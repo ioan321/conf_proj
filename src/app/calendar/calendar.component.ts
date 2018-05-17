@@ -9,6 +9,8 @@ import { EventDialogService} from '../event-dialog.service';
 })
 export class CalendarComponent implements OnInit {
 
+  room = "Larry Bird";
+  
   constructor(public eventDialog: EventDialogService) {}
 
   ngOnInit() {
@@ -18,5 +20,4 @@ export class CalendarComponent implements OnInit {
     console.log(e);
   }
 
-  room = "Larry Bird";
 }
