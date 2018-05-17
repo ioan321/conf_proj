@@ -16,3 +16,4 @@ $warn: mat-color(map-get($theme, warn));
 $toolbarHeight: 64px;
 $contentMarginVert: 10px;
 $contentMarginHorz: 15px;
+$contentHeight: calc(100vh - (#{$toolbarHeight} + #{$contentMarginVert} * 2));
