@@ -8,6 +8,8 @@ import { EventDialogService} from '../event-dialog.service';
 })
 export class BookComponent implements OnInit {
 
+  room = 'Larry Bird';
+  
   constructor(public eventDialog: EventDialogService) {}
 
   ngOnInit() {
