@@ -1,5 +1,5 @@
 import { Directive, HostListener } from '@angular/core';
-import { EventDialogService } from '../event-dialog.service';
+import { EventDialogService } from '../services/event-dialog.service';
 
 @Directive({
   selector: '[infyRoom]'
