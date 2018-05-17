@@ -37,11 +37,16 @@ import {
   MatDialogModule,
   MatInputModule
 } from '@angular/material';
+import { FloorMapComponent } from './floor-map/floor-map.component';
+import { Floor21Component } from './components/floors/floor21/floor21.component';
+import { Floor22Component } from './components/floors/floor22/floor22.component';
+import { RoomDirective } from './directives/room.directive';
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
   { path: 'book', component: BookComponent },
-  { path: 'calendar', component: CalendarComponent }
+  { path: 'calendar', component: CalendarComponent },
+  { path: 'floor-map', component: FloorMapComponent }
 ];
 
 @NgModule({
@@ -54,7 +59,11 @@ const routes: Routes = [
     CalendarComponent,
     CalEventComponent,
     CalEventListComponent,
-    EventDialogCreateComponent
+    EventDialogCreateComponent,
+    FloorMapComponent,
+    Floor21Component,
+    Floor22Component,
+    RoomDirective
   ],
   imports: [
     BrowserModule,
