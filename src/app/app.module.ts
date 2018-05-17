@@ -42,12 +42,15 @@ import { FloorMapComponent } from './components/floor-view/floor-map/floor-map.c
 import { Floor21Component } from './components/floor-view/floors/floor21/floor21.component';
 import { Floor22Component } from './components/floor-view/floors/floor22/floor22.component';
 import { RoomDirective } from './directives/room.directive';
+import { EmployeeEventsComponent } from './components/employee-events/employee-events.component';
+import { CalEventPipe } from './pipes/cal-event.pipe';
 
 const routes: Routes = [
   { path: '', redirectTo: 'book', pathMatch: 'full' },
   { path: 'book', component: BookComponent },
   { path: 'calendar', component: CalendarComponent },
-  { path: 'floor-map', component: FloorMapComponent }
+  { path: 'floor-map', component: FloorMapComponent },
+  { path: 'view-event', component: EmployeeEventsComponent }
 ];
 
 @NgModule({
@@ -64,7 +67,9 @@ const routes: Routes = [
     FloorMapComponent,
     Floor21Component,
     Floor22Component,
-    RoomDirective
+    RoomDirective,
+    EmployeeEventsComponent,
+    CalEventPipe
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<div class="eventsList">
+  <mat-toolbar color="accent" class="empEventHeader">
+    <mat-toolbar-row>
+      <span class="white-space">Employee ID: </span>
+      <mat-form-field>
+        <input type="text" matInput [(ngModel)]="options.empId">
+      </mat-form-field>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <infy-cal-event-list
+    class="eventList"
+    [options]="options"></infy-cal-event-list>
+</div>

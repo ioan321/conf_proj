@@ -1,5 +1,5 @@
 <div class="eventList">
   <infy-cal-event
-    *ngFor="let calEvent of calEvents"
+    *ngFor="let calEvent of calEvents | calEventFilter:options"
     [calEvent]="calEvent"></infy-cal-event>
 </div>
